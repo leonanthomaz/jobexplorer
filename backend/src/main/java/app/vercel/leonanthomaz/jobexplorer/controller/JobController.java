@@ -34,7 +34,6 @@ public class JobController {
 
     @GetMapping("/search")
     public ResponseEntity<List<Job>> buscarVagas(@RequestParam String job) {
-        log.info("PALAVRA CHAVE CONTROLLER: {}", job);
         return ResponseEntity.status(HttpStatus.OK).body(jobService.searchJobs(job));
     }
 }
